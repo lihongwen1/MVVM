@@ -20,11 +20,11 @@ final class CxResponseBodyConverter<T> implements Converter<ResponseBody, T> {
         this.adapter = adapter;
     }
 
+    @SuppressWarnings("rawtypes")
     @Override
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
         BasicResponse basicResponse = gson.fromJson(response, BasicResponse.class);
-        // 这里只是为了检测code是否!=0,所以只解析HttpStatus中的字段,因为只要code和message就可以了
         if (basicResponse.getErrorCode() != BasicResponseCode.SUCCESS) {
             value.close();
             throw new ApiException(basicResponse.getErrorCode(), basicResponse.getErrorMsg());
