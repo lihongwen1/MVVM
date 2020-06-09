@@ -1,4 +1,4 @@
-package com.chenxuan.kotlinmvp
+package com.chenxuan.kotlin
 
 import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route

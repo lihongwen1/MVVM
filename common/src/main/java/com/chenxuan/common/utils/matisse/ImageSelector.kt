@@ -41,7 +41,7 @@ object ImageSelector {
             .countable(true)
             .maxSelectable(9)
             .capture(true)
-            .captureStrategy(CaptureStrategy(true, "com.chenxuan.kotlinmvp.fileprovider"))
+            .captureStrategy(CaptureStrategy(true, "com.chenxuan.kotlin.mvvm.fileprovider"))
             .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
             .thumbnailScale(0.85f)
             .imageEngine(CxGlideEngine())
