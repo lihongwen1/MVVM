@@ -5,6 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
+/**
+ * @author cx
+ */
 abstract class BaseViewModel : ViewModel() {
     /**
      * 协程状态管理

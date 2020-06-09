@@ -6,7 +6,6 @@ import retrofit2.http.GET
 
 /**
  * @author cx
- * login module api
  */
 interface LoginApiService : BaseService {
     @GET("/wxarticle/chapters/json")

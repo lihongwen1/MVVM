@@ -10,6 +10,9 @@ import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
 import com.zhihu.matisse.internal.entity.CaptureStrategy
 
+/**
+ * @author cx
+ */
 object ImageSelector {
     private const val REQUEST_CODE_CHOOSE = 10
 

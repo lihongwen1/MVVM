@@ -11,6 +11,9 @@ import com.chenxuan.login.R
 import com.chenxuan.login.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_login.*
 
+/**
+ * @author cx
+ */
 @Route(path = RouterPath.LOGIN_MAIN)
 class LoginActivity : BaseActivity<LoginViewModel>() {
     override fun createViewModel() = ViewModelProvider(this)[LoginViewModel::class.java]

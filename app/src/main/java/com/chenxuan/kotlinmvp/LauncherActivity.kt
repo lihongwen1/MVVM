@@ -8,6 +8,9 @@ import com.chenxuan.common.utils.router.Router
 import com.chenxuan.common.utils.router.RouterPath
 import kotlinx.android.synthetic.main.activity_launcher.*
 
+/**
+ * @author cx
+ */
 @Route(path = RouterPath.APP_LAUNCHER)
 class LauncherActivity : BaseSimpleActivity() {
     override fun getContentView(): Int {

@@ -8,6 +8,9 @@ import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+/**
+ * @author cx
+ */
 class LoginViewModel : BaseViewModel() {
     val contentLiveData: MutableLiveData<String> by lazy {
         MutableLiveData<String>()
