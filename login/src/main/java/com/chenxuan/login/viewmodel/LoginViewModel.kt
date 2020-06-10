@@ -2,27 +2,22 @@ package com.chenxuan.login.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import com.chenxuan.common.base.BaseViewModel
-import com.chenxuan.login.api.LoginApiService
-import com.chenxuan.net.ApiServiceUtil
+import com.chenxuan.login.repository.LoginRepository
 import com.google.gson.Gson
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 /**
  * @author cx
  */
-class LoginViewModel : BaseViewModel() {
+class LoginViewModel : BaseViewModel<LoginRepository>() {
+    override fun createRepository() = LoginRepository()
+
     val contentLiveData: MutableLiveData<String> by lazy {
         MutableLiveData<String>()
     }
 
     fun getChapters() {
         launch {
-            val service = ApiServiceUtil.getApiService<LoginApiService>()
-            val chapters = withContext(Dispatchers.IO) {
-                service.getChapters()
-            }
-            val json = Gson().toJson(chapters)
+            val json = Gson().toJson(repository.getChapters())
             contentLiveData.value = json
         }
     }

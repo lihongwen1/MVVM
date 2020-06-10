@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 /**
  * @author cx
  */
-abstract class BaseFragment<T : BaseViewModel> : BaseSimpleFragment() {
+abstract class BaseFragment<V : BaseRepository, T : BaseViewModel<V>> : BaseSimpleFragment() {
     protected lateinit var viewModel: T
 
     override fun initViewModel() {

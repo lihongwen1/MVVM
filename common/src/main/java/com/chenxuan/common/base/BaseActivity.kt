@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 /**
  * @author cx
  */
-abstract class BaseActivity<T : BaseViewModel> : BaseSimpleActivity() {
+abstract class BaseActivity<V : BaseRepository, T : BaseViewModel<V>> : BaseSimpleActivity() {
     protected lateinit var viewModel: T
 
     override fun initViewModel() {
