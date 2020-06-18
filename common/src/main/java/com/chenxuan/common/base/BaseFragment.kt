@@ -10,11 +10,12 @@ import kotlinx.coroutines.launch
  * @author cx
  */
 abstract class BaseFragment<V : BaseRepository, T : BaseViewModel<V>> : BaseSimpleFragment() {
-    protected lateinit var viewModel: T
+    protected val viewModel: T by lazy {
+        createViewModel()
+    }
 
     override fun initViewModel() {
         super.initViewModel()
-        viewModel = createViewModel()
         initViewModelActions()
     }
 

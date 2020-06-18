@@ -37,6 +37,8 @@ class ScanActivity : BaseSimpleActivity() {
                     rawResult.text,
                     Toast.LENGTH_SHORT
                 ).show()
+                else -> {
+                }
             }
             finish()
         }
